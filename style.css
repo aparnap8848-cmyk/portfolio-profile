@@ -248,70 +248,218 @@ a {
 }
 
 
-/* SKILLS */
+/* =========================
+   SKILLS SECTION
+========================= */
 
-.skills-container {
-    max-width: 850px;
-    margin: 0 auto;
+.skills-section {
+    min-height: 600px;
+    padding: 90px 8%;
+    background: #08000d;
+    color: white;
 }
+
+.skills-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 80px;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 25px rgba(180, 0, 255, 0.4);
+}
+
+
+/* Two columns */
+
+.skills-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+
+/* Individual row */
 
 .skill-row {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin: 24px 0;
+    gap: 25px;
+    margin-bottom: 35px;
 }
 
+
+/* Icon */
+
 .skill-icon {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    background: #160a20;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    /* box-shadow: 0 0 15px currentColor; */
 }
 
-.skill-info {
-    flex: 1;
+
+/* Icon colors */
+
+.python {
+    color: #ff7b35;
 }
 
-.skill-info > span {
-    font-size: 0.9rem;
-    color: #d8ccdf;
+.html {
+    color: #00aaff;
 }
+
+.css {
+    color: #ffe000;
+}
+
+.js {
+    color: #00d9ff;
+}
+
+.django {
+    color: #8295ff;
+}
+
+.sql {
+    color: #ff3030;
+}
+
+.bootstrap {
+    color: #20e060;
+}
+
+.git {
+    color: #61c8ff;
+}
+
+
+/* Dots */
 
 .skill-dots {
     display: flex;
-    gap: 9px;
-    margin-top: 8px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
 }
 
-.skill-dots i {
-    width: 9px;
-    height: 9px;
+
+/* Individual dot */
+
+.skill-dots span {
+    width: 10px;
+    height: 10px;
+
     border-radius: 50%;
-    background: currentColor;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    box-shadow: none
+
+    transition: 0.3s ease;
 }
 
-.orange { color: #ff8b32; }
-.blue { color: #438dff; }
-.yellow { color: #f4db35; }
-.cyan { color: #10d9ef; }
-.violet { color: #947aff; }
-.red { color: #ff405a; }
-.green { color: #23d76a; }
 
-.orange-dots { color: #ff8b32; }
-.blue-dots { color: #2487e8; }
-.yellow-dots { color: #e5d22d; }
-.cyan-dots { color: #10cce4; }
-.violet-dots { color: #8879f5; }
-.red-dots { color: #ed3e55; }
-.green-dots { color: #20bd56; }
+/* Active dots */
+
+.skill-dots span.active {
+    box-shadow: none
+}
+
+
+/* Dot colors */
+
+.python-dot {
+    background: #ff7b35 !important;
+    color: #ff7b35;
+}
+
+.html-dot {
+    background: #00aaff !important;
+    color: #00aaff;
+}
+
+.css-dot {
+    background: #ffe000 !important;
+    color: #ffe000;
+}
+
+.js-dot {
+    background: #00d9ff !important;
+    color: #00d9ff;
+}
+
+.django-dot {
+    background: #8295ff !important;
+    color: #8295ff;
+}
+
+.sql-dot {
+    background: #ff3030 !important;
+    color: #ff3030;
+}
+
+.bootstrap-dot {
+    background: #20e060 !important;
+    color: #20e060;
+}
+
+.git-dot {
+    background: #61c8ff !important;
+    color: #61c8ff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .skills-section {
+        padding: 70px 5%;
+    }
+
+    .skills-title {
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .skill-row {
+        gap: 15px;
+        margin-bottom: 28px;
+    }
+
+    .skill-dots {
+        gap: 7px;
+    }
+
+    .skill-dots span {
+        width: 10px;
+        height: 10px;
+    }
+
+}
 
 
 /* PROJECTS */
